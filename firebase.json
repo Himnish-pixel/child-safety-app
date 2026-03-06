@@ -1,0 +1,42 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "child-safety-app-b463c",
+          "appId": "1:178920984242:android:1cb33a49003b02454783ab",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "child-safety-app-b463c",
+          "configurations": {
+            "android": "1:178920984242:android:1cb33a49003b02454783ab",
+            "ios": "1:178920984242:ios:ebefb04ef77521af4783ab",
+            "macos": "1:178920984242:ios:ebefb04ef77521af4783ab",
+            "web": "1:178920984242:web:8e2ab8bbceb266574783ab",
+            "windows": "1:178920984242:web:e143b762ff848d6e4783ab"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "disallowLegacyRuntimeConfig": true,
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ]
+}
